@@ -1,13 +1,13 @@
 function nameCheck(inputText) {
     console.log("::: Running checkForName :::", inputText);
-    let Owners = [
+    let names = [
         "Mark",
         "Jack",
         "Kirk",
         "Dirk",
         "George"
     ]
-    if(Owners.includes(inputText)) {
+    if(names.includes(inputText)) {
         alert("Welcome back " + inputText + "!")
     }
     else{

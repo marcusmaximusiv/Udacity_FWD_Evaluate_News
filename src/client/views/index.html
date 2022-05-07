@@ -23,9 +23,9 @@
             </div>
             <!--this section handles the submission-->
             <section>
-                <form class="" onsubmit="Client.handleSubmit(event)">
+                <form class="" onsubmit="return handleSubmit(event)">
                     <input id="url" type="text" name="input" value="" placeholder="Input Link Here">
-                    <input type="submit" name="" value="submit" onclick="Client.handleSubmit(event)" onsubmit="handleSubmit(event)">
+                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
             <!--This part of the code is where the results from the API fetch will show up-->
@@ -36,7 +36,7 @@
                 </div>
             </section>
         </main>
-        <!--This section is mainly for the footer-->
+        <!--This section is mainly for footer-->
         <footer>
         </footer>
 

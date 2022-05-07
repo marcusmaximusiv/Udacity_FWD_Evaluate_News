@@ -13,7 +13,17 @@ module.exports = {
             {
                 test: '/\.js$/',
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: "babel-loader",
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    {
+                      loader: "sass-loader",
+                      options: {
+                        implementation: require("sass"),
+                      },
+                    },
+                  ]
             }
         ]
     },
@@ -23,11 +33,8 @@ module.exports = {
             filename: "./index.html",
         }),
         new CleanWebpackPlugin({
-            // Simulate the removal of files
             dry: true,
-            // Write Logs to Console
             verbose: true,
-            // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         })

@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <title>Evaluate News Article - Analysis</title>
     </head>
 
     <body>
-
+        <!--This section is the header part of the webpage-->
         <header>
-            <div class="">
-                Logo
+            <!--this section of the code only applies to the logo-->
+            <div class="logo">
             </div>
-            <div class="">
-                navigation
+             <!--this section of the code corresponds to the navigation on the page-->
+            <div class="nav">
             </div>
         </header>
-
+        <!--this section is the main body of the webpage-->
         <main>
+            <div id ="header">
+                <h1>Evaluate a News Article with NLP (Natural Language Processing)</h1>
+            </div>
+            <!--this section handles the submission-->
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="text" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="Client.handleSubmit(event)">
+                    <input id="url" type="text" name="input" value="" placeholder="Input Link Here">
+                    <input type="submit" name="" value="submit" onclick="Client.handleSubmit(event)" onsubmit="handleSubmit(event)">
                 </form>
             </section>
-
+            <!--This part of the code is where the results from the API fetch will show up-->
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-                
+                <strong>Article Sentiment Results:</strong>
+                <!--results from the api pull will post in the div with id "results" listed below-->
+                <div id="results">
+                </div>
             </section>
         </main>
-
+        <!--This section is mainly for the footer-->
         <footer>
-            <p>This is a footer</p>
         </footer>
 
     </body>

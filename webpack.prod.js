@@ -6,21 +6,17 @@ module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
     module: {
-        rules: [
-            {
-                test: '/\.js$/',
-                exclude: /node_modules/,
-                loader: "babel-loader",
-                use: [
-                    // Creates `style` nodes from JS strings
-                    "style-loader",
-                    // Translates CSS into CommonJS
-                    "css-loader",
-                    // Compiles Sass to CSS
-                    "sass-loader",
-                  ]
-            }
-        ]
+       rules: [
+              {
+                  test: '/\.js$/',
+                  exclude: /node_modules/,
+                  loader: "babel-loader",
+              },
+              {
+                  test: /\.scss$/,
+                  use: ['style-loader', 'css-loader', 'sass-loader']
+              }
+          ] 
     },
     plugins: [
         new HtmlWebPackPlugin({

@@ -10,22 +10,16 @@ module.exports = {
     stats: 'verbose',
     module: {
         rules: [
-            {
-                test: '/\.js$/',
-                exclude: /node_modules/,
-                loader: "babel-loader",
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    {
-                      loader: "sass-loader",
-                      options: {
-                        implementation: require("sass"),
-                      },
-                    },
-                  ]
-            }
-        ]
+          {
+              test: '/\.js$/',
+              exclude: /node_modules/,
+              loader: "babel-loader",
+          },
+          {
+              test: /\.scss$/,
+              use: ['style-loader', 'css-loader', 'sass-loader']
+          }
+      ]
     },
     plugins: [
         new HtmlWebPackPlugin({

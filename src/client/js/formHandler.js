@@ -1,3 +1,6 @@
+const submitButton = document.querySelector('#submit-button');
+submitButton.addEventListener('click', handleSubmit)
+
 function handleSubmit(event)
 {
 event.preventDefault();

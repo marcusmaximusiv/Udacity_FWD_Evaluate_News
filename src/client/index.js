@@ -6,7 +6,6 @@ import { nameCheck } from './js/nameCheck'
 import './styles/base.scss'
 import './styles/header.scss'
 import './styles/resets.scss'
-import './styles/footer.scss'
 import './styles/form.scss'
 //This area of the file exports all of the JS functions from within the js folder
 export {

@@ -1,10 +1,13 @@
+//import nameCheck because we use it on line 12
+import { nameCheck } from './js/nameCheck';
+//JS for handling the value what the user enters after clicking the submit button 
 const submitButton = document.querySelector('#submit-button');
-submitButton.addEventListener('click', handleSubmit)
-
+submitButton.addEventListener('click', handleSubmit);
+//This is the function for the handling submit once someone has submitted an entry 
 function handleSubmit(event)
 {
 event.preventDefault();
-//here we are defining the even 
+//here we are defining the event
 const formentry = document.getElementById("url").value;
 nameCheck(formentry);
 //here the form data entered is being submitted and then what will happen is the results are posted under the article sentiment results

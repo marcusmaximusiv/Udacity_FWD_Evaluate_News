@@ -1,5 +1,3 @@
-//import nameCheck because we use it on line 12
-import { nameCheck } from './js/nameCheck';
 //JS for handling the value what the user enters after clicking the submit button 
 const submitButton = document.querySelector('#submit-button');
 submitButton.addEventListener('click', handleSubmit);
